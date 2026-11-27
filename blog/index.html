@@ -26,6 +26,12 @@ img{max-width:100%}
 a{color:#2B2926;text-decoration:none}a:hover{color:#6B655C}
 .prose a{border-bottom:1px solid #2B2926}
 .prose li{margin:6px 0}
+@media (min-width: 1000px){.hv{zoom:1.15}}
+@media (max-width: 760px){.hv{max-width:92%!important}}
+details summary::-webkit-details-marker{display:none}
+details[open] .fq-plus{transform:rotate(45deg)}
+.fq-plus{transition:transform .2s}
+@media (max-width: 760px){.m-sticky{display:flex!important}body{padding-bottom:70px}.pw-line{display:none}}
 @media (max-width: 480px){.site-tag{display:none!important}.site-head > div > a{padding:10px 14px!important}}
 @media (max-width: 760px){
 [style*="grid-template-columns: repeat(auto-fit"]{grid-template-columns:1fr!important}
