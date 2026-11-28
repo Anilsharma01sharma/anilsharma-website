@@ -78,6 +78,7 @@ p[style*="font-size: 3"][style*="Newsreader"],blockquote[style*="font-size: 3"]{
 #top > div{padding-top:48px!important;padding-bottom:48px!important;min-height:0!important}
 }
 @media (max-width: 480px){.site-tag{display:none!important}.site-head > div > a{padding:10px 14px!important}}
+.cal-inline{height:720px;overflow:hidden}.cal-inline iframe{display:block;width:100%!important;height:100%!important;border:0}@media(max-width:760px){.cal-inline{height:1050px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Anil Sharma","jobTitle":"SEO & Paid Media Consultant","url":"https://anilsharma.co/","image":"https://anilsharma.co/assets/anil-sharma.jpg","email":"mailto:anilsharma01sharma@gmail.com","telephone":"+91 97793 39335","address":{"@type":"PostalAddress","addressLocality":"Shimla","addressRegion":"Himachal Pradesh","addressCountry":"IN"},"areaServed":["Shimla","Himachal Pradesh","Chandigarh","India","United States","United Kingdom","Australia"],"worksFor":[{"@type":"Organization","@id":"https://zorvextechnologies.com/#organization","name":"Zorvex Technologies","url":"https://zorvextechnologies.com/"},{"@type":"Organization","@id":"https://uniqwebinfotech.com/#organization","name":"Uniq Web Infotech","url":"https://uniqwebinfotech.com/"}],"sameAs":["https://www.upwork.com/freelancers/anils177","https://www.linkedin.com/in/seo-expert-in-himachal-pradesh/","https://www.facebook.com/AnilsharmaGoogleCertifiedSEOSEMExpert","https://www.freelancer.com/u/ash59a1b9bf578d2"]}</script>
 <style>
@@ -549,7 +550,7 @@ p[style*="font-size: 3"][style*="Newsreader"],blockquote[style*="font-size: 3"]{
 <p style="margin: 28px 0 0; color: #A8A196; font-size: 15px">anilsharma01sharma@gmail.com · +91 97793 39335</p>
 </div>
 <div style="flex: 1 1 520px; min-width: 0">
-<div class="cal-inline" data-url="https://calendly.com/anilsharma01sharma/15min?hide_gdpr_banner=1&amp;background_color=f4f1ec&amp;text_color=2b2926&amp;primary_color=2b2926" style="background: #F4F1EC; min-height: 700px; position: relative">
+<div class="cal-inline" data-url="https://calendly.com/anilsharma01sharma/15min?hide_gdpr_banner=1&amp;background_color=f4f1ec&amp;text_color=2b2926&amp;primary_color=2b2926" style="background: #F4F1EC; position: relative">
 <div class="cal-ph" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; color: #2B2926; text-align: center; padding: 24px">
 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#8A6F52" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 <p style="margin: 0; font-family: 'Newsreader', serif; font-size: 26px">Loading available times…</p>
@@ -637,7 +638,7 @@ window.__calLoad=load;
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-calendly]');if(!a||e.metaKey||e.ctrlKey||e.shiftKey)return;e.preventDefault();var href=a.href+(a.href.indexOf('?')<0?'?':'&')+'hide_gdpr_banner=1&primary_color=2b2926';load().then(function(){Calendly.initPopupWidget({url:href});}).catch(function(){window.open(a.href,'_blank','noopener');});});})();
 </script>
 <script>
-(function(){var el=document.querySelector('.cal-inline');if(!el)return;var done=0;function go(){if(done)return;done=1;(window.__calLoad?window.__calLoad():Promise.reject()).then(function(){var ph=el.querySelector('.cal-ph');Calendly.initInlineWidget({url:el.dataset.url,parentElement:el});setTimeout(function(){if(ph)ph.remove();},2500);}).catch(function(){});}
+(function(){var el=document.querySelector('.cal-inline');if(!el)return;var done=0;function go(){if(done)return;done=1;(window.__calLoad?window.__calLoad():Promise.reject()).then(function(){var ph=el.querySelector('.cal-ph');Calendly.initInlineWidget({url:el.dataset.url,parentElement:el});var f=el.querySelector('iframe');if(f){f.addEventListener('load',function(){if(ph)ph.remove();});}setTimeout(function(){if(ph)ph.remove();},8000);}).catch(function(){});}
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){go();io.disconnect();}},{rootMargin:'600px'});io.observe(el);}else go();})();
 </script>
 </body>
