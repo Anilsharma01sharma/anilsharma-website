@@ -123,26 +123,25 @@ p[style*="font-size: 3"][style*="Newsreader"],blockquote[style*="font-size: 3"]{
   .wc figcaption{margin-top:clamp(6px,1vh,14px)!important;gap:2px!important}
   .wc-time{font-size:clamp(17px,2.5vh,22px)!important}
   .wc-foot{margin-top:clamp(10px,1.6vh,22px)!important;font-size:13px!important}
-  .hero-card{flex:0 1 380px!important;align-self:center!important}
+  .hero-card{flex:0 0 clamp(300px,calc(100svh - var(--hdr,76px) - 175px),420px)!important;width:clamp(300px,calc(100svh - var(--hdr,76px) - 175px),420px)!important;align-self:center!important}
   .hero-card > div{padding:12px!important}
-  .hero-photo{aspect-ratio:auto!important;height:clamp(140px,23vh,330px)!important;object-position:50% 18%!important}
-  .hero-card > div > div:nth-child(2){padding:12px 4px 2px!important}
-  .rv-wrap{margin-top:clamp(8px,1.4vh,16px)!important;padding:10px 12px!important}
-  .rv-track{min-height:clamp(76px,10.5vh,104px)!important}
-  .rv blockquote{font-size:clamp(15px,2.1vh,18px)!important}
+  .hero-photo{aspect-ratio:1 / 1!important;height:auto!important;width:100%!important;object-fit:cover!important;object-position:50% 50%!important}
   .cal-cta{margin-top:clamp(8px,1.4vh,16px)!important;padding:clamp(12px,1.8vh,16px) 12px!important}
   .hero-card .cal-cta + div a{padding-top:clamp(11px,1.6vh,15px)!important;padding-bottom:clamp(11px,1.6vh,15px)!important}
 }
 @media (min-width: 981px) and (max-height: 760px){
   .wc-rel{display:none!important}
   .wc-note{display:none!important}
-  .hero-card > div > div:nth-child(2) > div:nth-child(3){margin-top:8px!important}
-  .hero-card > div > div:nth-child(2) > div:first-child{font-size:24px!important}
 }
 @media (min-width: 981px) and (max-height: 660px){
   .wc-meta{display:none!important}
-  .hero-card > div > div:nth-child(2) > div:nth-child(3){display:none!important}
 }
+
+/* Profile card: name and badges sit over the photo */
+.hero-info span{background:rgba(20,19,17,.35);font-size:12px!important;padding:3px 9px!important}
+.hero-info > div:first-child{text-shadow:0 1px 8px rgba(0,0,0,.4)}
+@media (max-width: 980px){.hero-info{position:static!important;background:none!important;padding:14px 2px 0!important}.hero-info span{background:none}}
+@media (min-width: 981px) and (max-height: 700px){.hero-info > div:nth-child(3){display:none!important}.hero-info{padding-top:44px!important}}
 </style>
 <script>(function(){function f(){var h=document.querySelector('header');if(h)document.documentElement.style.setProperty('--hdr',h.offsetHeight+'px');}f();addEventListener('resize',f);})();</script>
 </head>
@@ -196,54 +195,17 @@ p[style*="font-size: 3"][style*="Newsreader"],blockquote[style*="font-size: 3"]{
 <aside aria-label="About Anil Sharma" class="hero-card" style="flex: 0 1 390px; min-width: 280px; position: relative; align-self: center">
 <div style="background: rgba(244,241,236,.14); -webkit-backdrop-filter: blur(14px) saturate(120%); backdrop-filter: blur(14px) saturate(120%); border: 1px solid rgba(244,241,236,.32); padding: 14px; box-shadow: 0 30px 60px rgba(0,0,0,.28)">
 <div style="position: relative">
-<img class="hero-photo" src="/assets/anil-sharma.jpg" width="480" height="480" alt="Anil Sharma, SEO and paid media consultant" style="display: block; width: 100%; height: auto; aspect-ratio: 10 / 9; object-fit: cover; object-position: 50% 30%">
+<img class="hero-photo" src="/assets/anil-sharma.jpg" width="480" height="480" alt="Anil Sharma, SEO and paid media consultant" style="display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 50%">
 <a href="https://calendly.com/anilsharma01sharma/15min" data-calendly class="avail-badge" style="position: absolute; left: 12px; top: 12px; display: inline-flex; align-items: center; gap: 8px; background: rgba(31,30,27,.72); color: #F4F1EC; font-size: 13px; padding: 6px 12px 6px 10px; border-radius: 999px"><span class="avail-dot" style="width: 9px; height: 9px; border-radius: 50%; background: #6FCF8E; box-shadow: 0 0 0 0 rgba(111,207,142,.7)"></span><span class="avail-text">Available for calls</span></a>
-</div>
-<div style="padding: 16px 6px 6px">
-<div style="font-family: 'Newsreader', serif; font-size: 28px; line-height: 1.1; color: #FFFFFF">Anil Sharma</div>
+<div class="hero-info" style="position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 16px 14px; background: linear-gradient(0deg, rgba(20,19,17,.88) 0%, rgba(20,19,17,.55) 55%, rgba(20,19,17,0) 100%)"><div style="font-family: 'Newsreader', serif; font-size: 28px; line-height: 1.1; color: #FFFFFF">Anil Sharma</div>
 <div style="font-size: 15px; color: #E2DBCF; margin-top: 4px">Founder, Zorvex Technologies &amp; Uniq Web Infotech</div>
 <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px">
 <span style="font-size: 13px; color: #F4F1EC; border: 1px solid rgba(244,241,236,.4); padding: 4px 10px">★ Top Rated Plus</span>
 <span style="font-size: 13px; color: #F4F1EC; border: 1px solid rgba(244,241,236,.4); padding: 4px 10px">100% Job Success</span>
 <span style="font-size: 13px; color: #F4F1EC; border: 1px solid rgba(244,241,236,.4); padding: 4px 10px">500+ clients</span>
+</div></div>
 </div>
-<section class="rv-wrap" aria-roledescription="carousel" aria-label="Client reviews" style="margin: 16px 0 0; padding: 12px 14px; background: rgba(244,241,236,.12); border-left: 2px solid #C9B48A">
-<div class="rv-track" aria-live="polite" style="position: relative; min-height: 104px"><figure class="rv" role="group" aria-roledescription="slide" aria-label="1 of 10" style="margin: 0; position: absolute; inset: 0; opacity: 1; visibility: visible; transition: opacity .6s ease, visibility .6s">
-<blockquote style="margin: 0; font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.35; color: #FFFFFF">“I highly recommend Anil! He is excellent at what he does and is always available when I need him.”</blockquote>
-<figcaption style="margin-top: 6px; font-size: 13px; color: #E2DBCF"><span style="color: #E8C15A; letter-spacing: 1px">★★★★★</span> Upwork client · SEO &amp; websites</figcaption>
-</figure><figure class="rv" role="group" aria-roledescription="slide" aria-label="2 of 10" style="margin: 0; position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s">
-<blockquote style="margin: 0; font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.35; color: #FFFFFF">“Anil has been an invaluable asset in managing my entire agency and handling daily tasks.”</blockquote>
-<figcaption style="margin-top: 6px; font-size: 13px; color: #E2DBCF"><span style="color: #E8C15A; letter-spacing: 1px">★★★★★</span> Upwork client · Analytics &amp; Tag Manager</figcaption>
-</figure><figure class="rv" role="group" aria-roledescription="slide" aria-label="3 of 10" style="margin: 0; position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s">
-<blockquote style="margin: 0; font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.35; color: #FFFFFF">“Great to work with, excellent communicator. Extremely knowledgeable in all aspects of SEO and SEM.”</blockquote>
-<figcaption style="margin-top: 6px; font-size: 13px; color: #E2DBCF"><span style="color: #E8C15A; letter-spacing: 1px">★★★★★</span> Upwork client · PPC, GMB &amp; SEO</figcaption>
-</figure><figure class="rv" role="group" aria-roledescription="slide" aria-label="4 of 10" style="margin: 0; position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s">
-<blockquote style="margin: 0; font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.35; color: #FFFFFF">“What a great experience with Anil, on time delivery … his customer service is just amazing.”</blockquote>
-<figcaption style="margin-top: 6px; font-size: 13px; color: #E2DBCF"><span style="color: #E8C15A; letter-spacing: 1px">★★★★★</span> Upwork client · Structured data</figcaption>
-</figure><figure class="rv" role="group" aria-roledescription="slide" aria-label="5 of 10" style="margin: 0; position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s">
-<blockquote style="margin: 0; font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.35; color: #FFFFFF">“Highly recommend Anil for all your Google/Microsoft tagging needs. He was very responsive.”</blockquote>
-<figcaption style="margin-top: 6px; font-size: 13px; color: #E2DBCF"><span style="color: #E8C15A; letter-spacing: 1px">★★★★★</span> Upwork client · Google &amp; Microsoft tagging</figcaption>
-</figure><figure class="rv" role="group" aria-roledescription="slide" aria-label="6 of 10" style="margin: 0; position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s">
-<blockquote style="margin: 0; font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.35; color: #FFFFFF">“Working with Anil has been a pleasure. Very capable and competent professional!”</blockquote>
-<figcaption style="margin-top: 6px; font-size: 13px; color: #E2DBCF"><span style="color: #E8C15A; letter-spacing: 1px">★★★★★</span> Upwork client · SEO technician</figcaption>
-</figure><figure class="rv" role="group" aria-roledescription="slide" aria-label="7 of 10" style="margin: 0; position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s">
-<blockquote style="margin: 0; font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.35; color: #FFFFFF">“Anil did a great job and responded very professionally all the time.”</blockquote>
-<figcaption style="margin-top: 6px; font-size: 13px; color: #E2DBCF"><span style="color: #E8C15A; letter-spacing: 1px">★★★★★</span> Oswald V. · Freelancer.com</figcaption>
-</figure><figure class="rv" role="group" aria-roledescription="slide" aria-label="8 of 10" style="margin: 0; position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s">
-<blockquote style="margin: 0; font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.35; color: #FFFFFF">“Very helpful and persistent. Figured out a workaround to an odd tricky issue with Google.”</blockquote>
-<figcaption style="margin-top: 6px; font-size: 13px; color: #E2DBCF"><span style="color: #E8C15A; letter-spacing: 1px">★★★★★</span> Jeff P. · Freelancer.com</figcaption>
-</figure><figure class="rv" role="group" aria-roledescription="slide" aria-label="9 of 10" style="margin: 0; position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s">
-<blockquote style="margin: 0; font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.35; color: #FFFFFF">“Excelente comunicacion y entregado dentro de los terminos.”</blockquote>
-<figcaption style="margin-top: 6px; font-size: 13px; color: #E2DBCF"><span style="color: #E8C15A; letter-spacing: 1px">★★★★★</span> Oscar R. · Freelancer.com · “Excellent communication, delivered on time”</figcaption>
-</figure><figure class="rv" role="group" aria-roledescription="slide" aria-label="10 of 10" style="margin: 0; position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s">
-<blockquote style="margin: 0; font-family: 'Newsreader', serif; font-size: 18px; line-height: 1.35; color: #FFFFFF">“Delivered good work!”</blockquote>
-<figcaption style="margin-top: 6px; font-size: 13px; color: #E2DBCF"><span style="color: #E8C15A; letter-spacing: 1px">★★★★★</span> Niels A. · Freelancer.com</figcaption>
-</figure></div>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 8px">
-<span class="rv-count" style="font-size: 12px; letter-spacing: 0.14em; color: #CFC8BC">1 / 10</span>
-<span style="display: inline-flex; gap: 6px"><button type="button" class="rv-prev" aria-label="Previous review" style="background: transparent; border: 1px solid rgba(244,241,236,.45); color: #F4F1EC; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; font-size: 16px; line-height: 1; padding: 0">‹</button><button type="button" class="rv-next" aria-label="Next review" style="background: transparent; border: 1px solid rgba(244,241,236,.45); color: #F4F1EC; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; font-size: 16px; line-height: 1; padding: 0">›</button></span>
-</div>
-</section>
+<div class="hero-actions" style="padding: 12px 0 0">
 <a href="https://calendly.com/anilsharma01sharma/15min" data-calendly class="cal-cta" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 16px; background: #C9B48A; color: #2B2926; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; padding: 16px 12px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book a free 15-min call</a>
 <div style="display: flex; gap: 8px; margin-top: 8px">
 <a href="https://www.upwork.com/freelancers/anils177" style="flex: 1; text-align: center; background: #F4F1EC; color: #2B2926; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; padding: 15px 12px">Hire me on Upwork →</a>
@@ -668,17 +630,6 @@ function run(it){var start=Math.min(1,it.target),dur=1800,t0=performance.now();f
 items.forEach(function(it){it.el.textContent=fmt(Math.min(1,it.target),it);});
 var io=new IntersectionObserver(function(en){en.forEach(function(e){if(!e.isIntersecting)return;for(var i=0;i<items.length;i++){if(items[i].el===e.target){run(items[i]);break;}}io.unobserve(e.target);});},{threshold:0.4});
 items.forEach(function(it){io.observe(it.el);});})();
-</script>
-<script>
-(function(){var w=document.querySelector('.rv-wrap');if(!w)return;var s=w.querySelectorAll('.rv'),c=w.querySelector('.rv-count'),n=s.length,i=0,t;
-var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-function show(k){s[i].style.opacity=0;s[i].style.visibility='hidden';i=(k+n)%n;s[i].style.opacity=1;s[i].style.visibility='visible';c.textContent=(i+1)+' / '+n;}
-function play(){if(reduce)return;stop();t=setInterval(function(){show(i+1)},5500);}
-function stop(){if(t)clearInterval(t);}
-w.querySelector('.rv-next').addEventListener('click',function(){show(i+1);play();});
-w.querySelector('.rv-prev').addEventListener('click',function(){show(i-1);play();});
-w.addEventListener('mouseenter',stop);w.addEventListener('mouseleave',play);w.addEventListener('focusin',stop);w.addEventListener('focusout',play);
-play();})();
 </script>
 <script>
 (function(){var u='https://assets.calendly.com/assets/external/',p;function load(){if(p)return p;p=new Promise(function(ok,no){var l=document.createElement('link');l.rel='stylesheet';l.href=u+'widget.css';document.head.appendChild(l);var s=document.createElement('script');s.src=u+'widget.js';s.async=true;s.onload=ok;s.onerror=no;document.head.appendChild(s);});return p;}
